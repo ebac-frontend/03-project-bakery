@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header h1, section h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header{    /*edições do cabeçalho*/
+    padding: 16px 0;
+    background-color: #ffffff;  /*cor do header principal*/
+    color: #000000;
+}
+
+header nav li{
+    display: inline;
+    margin: 16px;
+    font-size: 22px;
+}
+
+header nav li a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container, section .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .container{
+    align-items: flex-start; /*para o texto ficar no topo, junto com a imagem*/
+}
+
+section{
+    padding: 24px 0;  /*espaçamento entre o header e a seção*/
+}
+
+section h2{
+    margin-bottom: 16px; /*espaçamento entre o título secundário e o texto*/
+}
+
+section p{
+    margin-bottom: 8px;
+}
+
+.store-front{           /*aplicamos uma classe específica apenas para mexer na foto*/
+    margin-right: 32px; /*espaçamento entre a foto e o texto*/
+    width: 700px; 
+    height: 410px; 
+}
+
+.store-front-2{
+    margin-right: 32px; /*espaçamento entre a foto e o texto*/
+    width: 600px; 
+    height: 410px;
+}
+
+#contact .container{
+    display: block;
+}
+
+.contact-methods{
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-links{
+    text-decoration: none;
+}
+
+form input, form textarea, form button{
+    display: block;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+form textarea{
+    resize: none;
+    height: 75px;
+}
+
+section h3{
+    margin-bottom: 16px;
+}
+
+form button{
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: #e0dfdf;
+}
+
+footer{
+    background-color: #ffffff;
+    padding: 16px 0;
+    text-align: end;
+}
