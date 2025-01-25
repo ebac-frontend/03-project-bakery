@@ -1,116 +1,731 @@
-*{
+/*GERAL*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300; 
 }
 
-header h1, section h2{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* Estilização da barra superior */
+.top-bar {
+    background-color: #3a3b3b; 
+    color: white; 
+    font-size: 14px; 
+    padding: 10px 20px; 
+    display: flex; 
+    justify-content: center; 
+    font-family: 'Poppins', sans-serif;
 }
 
-body{
-    font-family: 'Times New Roman', Times, serif;
+/* Estilização da barra superior */
+.top-bar {
+    background-color: #3a3b3b; 
+    color: white; 
+    font-size: 14px; 
+    padding: 10px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    font-family: 'Poppins', sans-serif;
 }
 
-header{    /*edições do cabeçalho*/
-    padding: 16px 0;
-    background-color: #ffffff;  /*cor do header principal*/
-    color: #000000;
+/* Estilização da barra superior */
+.top-bar {
+    background-color: #3a3b3b; 
+    color: white; 
+    font-size: 14px; 
+    padding: 10px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    font-family: 'Poppins', sans-serif;
 }
 
-header nav li{
+/* Estilização do bloco de informações (centralizado) */
+.info {
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; 
+    flex: 1; 
+    text-align: center;
+}
+
+/* Estilização do bloco de redes sociais (no final) */
+.social-media {
+    display: flex; 
+    gap: 10px; 
+}
+
+/* Estilização de links */
+.top-bar a {
+    color: white; 
+    text-decoration: none; 
+    font-size: 14px; 
+    display: flex; 
+    align-items: center; 
+    gap: 5px; 
+}
+
+/* Estilização dos ícones de informações */
+.info img {
+    width: 16px; 
+    height: 16px;
+    filter: invert(100%); 
+}
+
+/* Estilização específica para ícones de redes sociais da barra superior */
+.social-media img {
+    width: 24px; 
+    height: 24px;
+    filter: invert(100%); 
+    transition: transform 0.2s ease; 
+}
+
+.social-media img:hover {
+    transform: scale(1.1); 
+}
+
+/* Resetando os ícones do rodapé */
+.footer-icons img {
+    filter: none; 
+}
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; 
+}
+
+.titulo{
+    cursor: pointer;
+}
+
+/* Define a altura do carrossel */
+.carousel-item {
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
+
+/* Garante que o carrossel ocupe 100% da largura da coluna */
+.carousel.slide {
+    width: 80%;
+}
+
+/* Centraliza o carrossel na coluna */
+.d-flex.justify-content-center {
+    justify-content: center;
+}
+
+/* Centraliza o conteúdo da coluna de texto */
+.col-md-6.d-flex.flex-column {
+    text-align: left;
+    padding: 20px;
+}
+
+/* Espaçamento para o título e parágrafo */
+.container h2 {
+    margin-bottom: 18px;
+}
+
+/*CABEÇALHO*/
+
+header {
+    background-image: url('images/paes8.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 5px 0; 
+}
+
+header h1 {
+    font-family: Tahoma, sans-serif;
+    color: #fff;
+}
+
+.logo{
+    height: 170px;
+    border-radius: 150px;
+}
+
+header {    
+    background-color: #3f3e3c; 
+    padding: 10px 0;  
+}
+
+header nav {
+    display: flex;  
+    justify-content: flex-end; 
+}
+
+header nav li {    
     display: inline;
-    margin: 16px;
-    font-size: 22px;
+    margin: 2px;
+    font-size: 15px;
 }
 
-header nav li a{
-    color: #000000;
+header nav ul li a {
+    color: white;
     text-decoration: none;
 }
 
-.container{
-    max-width: 1200px; 
+header .dropdown{
+    display: inline;
+    margin: 10px; 
+    font-size: 20px;
+}
+
+.container {
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
 
-header .container, section .container{
+header .container, section .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-section .container{
-    align-items: flex-start; /*para o texto ficar no topo, junto com a imagem*/
+nav .btn {
+    background-color: transparent; 
+    border: none; 
+    color: white; 
 }
 
-section{
-    padding: 24px 0;  /*espaçamento entre o header e a seção*/
+nav .btn:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 
-section h2{
-    margin-bottom: 16px; /*espaçamento entre o título secundário e o texto*/
+nav .dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.8); 
 }
 
-section p{
+/*SEÇÕES*/
+
+section {
+    padding: 24px 0;
+}
+
+section h2 {
+    font-family: Tahoma, sans-serif;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+section p {
     margin-bottom: 8px;
 }
 
-.store-front{           /*aplicamos uma classe específica apenas para mexer na foto*/
-    margin-right: 32px; /*espaçamento entre a foto e o texto*/
-    width: 700px; 
-    height: 410px; 
+/* Ajuste das imagens para tamanho consistente */
+.store-front,
+.store-front-2 {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    object-fit: cover; 
+    margin-right: 32px; 
 }
 
-.store-front-2{
-    margin-right: 32px; /*espaçamento entre a foto e o texto*/
-    width: 600px; 
-    height: 410px;
+/* Seções com contêineres */
+#about .container,
+#saibamais .container,
+#brunch .container,
+#menu .container,
+#preferidos .container,
+#entregas .container {
+    background-color: rgba(80, 79, 79, 0.034);
+    padding: 20px;
+    border-radius: 1.5%;
 }
 
-#contact .container{
-    display: block;
+/*CARDS DE RESERVA*/
+.secao {
+    margin-bottom: 20px;
 }
 
-.contact-methods{
-    display: flex;
+.cards-container {
+    display: flex;  
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.social-links{
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+}
+
+.card p {
+    margin: 0 0 20px 0;
+}
+
+.secao .btn {
+    text-decoration: none;
+    background-color: #181717;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e0dfdf;
+}
+
+/*SEÇÃO DE CONTATO*/
+#contact {
+    background-color: #83826960;
+}
+
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    align-items: flex-start; 
+}
+
+#contact h2 {
+    margin: 0; 
+    padding: 0; 
+    font-size: 2em; 
+}
+
+.contact-methods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; 
+    width: 100%;
+}
+
+.contact-methods > div {
+    flex: 1;
+    min-width: 280px;
+    margin-right: 20px;
+}
+
+/* Ajustes para alinhar os ícones sociais */
+.contact-methods ul {
+    padding-left: 0; 
+    list-style: none; 
+    display: flex;
+    gap: 10px; 
+    align-items: center; 
+}
+
+.contact-methods h3 {
+    margin-bottom: 10px; 
+}
+
+.social-links {
     text-decoration: none;
 }
 
-form input, form textarea, form button{
+.social-links img {
+    width: 24px; 
+    height: 24px;
+}
+
+/*FORMULÁRIO*/
+form input, form textarea, form button {
     display: block;
-    width: 320px;
+    width: 100%; 
+    max-width: 600px;
     margin-bottom: 8px;
     padding: 8px;
 }
 
-form textarea{
+form textarea {
     resize: none;
     height: 75px;
 }
 
-section h3{
-    margin-bottom: 16px;
-}
-
-form button{
-    background-color: #000000;
+form button {
+    background-color: #161616fd;
     color: #ffffff;
     border: none;
     cursor: pointer;
 }
 
-form button:hover{
+form button:hover {
     background-color: #e0dfdf;
 }
 
-footer{
-    background-color: #ffffff;
-    padding: 16px 0;
+.mapa iframe{
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+}
+
+/*RODAPÉ*/
+footer {
+    background-color: #3a3b3b;
+    color: #ffffff;
+    padding: 12px 0;
     text-align: end;
 }
+
+/* Media Queries para telas menores */
+
+@media (max-width: 768px)  {
+    header {
+        flex-direction: row;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    .row .card {
+        max-width: 90%;
+    }
+    .container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #nav-menu.open {
+        display: block;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    header .container, section .container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    nav#nav-menu {
+        display: flex;
+        position: static;
+        background-color: transparent;
+        flex-direction: row;
+        width: auto;
+        text-align: left;
+    }
+
+    nav#nav-menu .dropdown {
+        margin: 0 10px;
+    }
+
+    header nav li {
+        display: block;
+        margin: 16px 0;
+        text-align: center;
+    }
+
+    .store-front, .store-front-2 {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+    }
+
+    .contact-methods > div {
+        margin-right: 0;
+        margin-bottom: 20px; 
+    }
+
+    .row .card {
+        margin: 20px auto;
+        max-width: 90%;
+        height: auto;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    /* Espaçamento final do carrossel e do título "Nossa história" */
+    #history .container {
+        margin-bottom: 10px;
+    }
+
+    /* Foto da seção "Escolha seu café da manhã" ainda embaixo do texto */
+    #brunch .container {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        text-align: left;
+    }
+    #brunch .store-front-2 {
+        margin-bottom: 20px;
+    }
+
+    /* Alinhamento do título no header com os links */
+    header .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    /* Cards de brunch especial */
+    .cards-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+
+/* Estilização para telas menores (iPhone) */
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    header .menu-toggle {
+        display: block;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    #history .container {
+        padding: 0 10px;
+        margin-bottom: 10px;
+    }
+
+    .carousel.slide {
+        max-width: 100%;
+    }
+
+    #brunch .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .row .card {
+        max-width: 100%;
+    }
+
+    /* Espaçamento final ainda menor para telas muito pequenas */
+    #history .container {
+        margin-bottom: 10px;
+    }
+
+    /* Ajuste de padding nos cards */
+    .card-body {
+        padding: 10px;
+    }
+
+    /* Ajuste de espaçamento nos cards de brunch especial */
+    .cards-container .card {
+        margin-bottom: 20px;
+    }
+
+    /* Reorganização do header */
+    header .container {
+        gap: 10px;
+    }
+
+    /* Imagens e textos devem ser empilhados */
+    .text-and-image {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Espaçamento entre texto e imagem */
+    }
+
+    .text-and-image img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    /* Garantir que imagens ocupem a largura total */
+    .image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    /* Garantir que textos fiquem alinhados corretamente */
+    .text-container {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* Media Queries para dispositivos com telas pequenas (iPhone SE, iPhone 5) */
+@media only screen and (max-width: 375px) {
+    /* Ajustes gerais */
+    body {
+        font-size: 14px; /* Diminuir a fonte do corpo para caber melhor na tela */
+        padding: 0;
+        margin: 0;
+    }
+
+    section {
+        padding: 8px; /* Menos padding para economizar espaço */
+    }
+
+    h2, h3, h5 {
+        font-size: 1.125rem; /* Ajustar tamanho de fonte para melhor visualização */
+        text-align: center;
+    }
+
+    p {
+        font-size: 0.875rem;
+        line-height: 1.4;
+        text-align: justify;
+    }
+
+    .carousel-inner img,
+    .store-front,
+    .store-front-2 {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajustes na estrutura de colunas */
+    .container {
+        width: 100%;
+        padding: 0 10px; 
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .col-md-6 {
+        flex: 1 1 100%; 
+        margin-bottom: 10px; 
+    }
+
+    /* Ajustes nos cards */
+    .card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajustes no botão */
+    .btn {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes para inputs e campos de formulário */
+    form input,
+    form textarea {
+        width: 100%;
+        margin-bottom: 8px;
+        padding: 8px;
+        font-size: 0.875rem;
+    }
+
+    /* Ajustes no mapa */
+    iframe {
+        width: 100%;
+        height: 150px; 
+    }
+
+    /* Ajustes na navegação */
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    /* Ajustes para a seção de imagens */
+    .secao img,
+    .store-front-2 {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    /* Ajustes para o contato */
+    .contact-methods div {
+        margin-bottom: 15px;
+    }
+
+    /* Ajustes para preferidos */
+    .accordion-button {
+        font-size: 0.875rem;
+        padding: 8px;
+    }
+
+    /* Ajustes no brunch e entregas */
+    #brunch div {
+        margin-bottom: 15px;
+    }
+
+    #entregas div {
+        margin-bottom: 15px;
+    }
+}
+
